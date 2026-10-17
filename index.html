@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111125">
+  <title>Browser UI Lab · CodeOn 2026 · Shirley Ramos</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header class="navigation">
+    <a href="#top" class="brand"><span class="star">✦</span> shinnmar <span style="color:#bda7d9;font-weight:500">/
+        browser lab</span></a>
+    <nav aria-label="Navegación de demostraciones">
+      <a href="#dialog-demo">01 Dialog</a><a href="#popover-demo">02 Popover</a><a href="#anchor-demo">03 Anchor</a><a
+        href="#has-demo">04 :has()</a><a href="#transition-demo">05 Transitions</a>
+    </nav>
+  </header>
+  <section class="hero" id="top">
+    <div>
+      <div class="eyebrow">CodeOn 2026 · Frontend Engineering</div>
+      <h1>Browser <span>UI Lab.</span></h1>
+      <p class="lede">Una sola landing, cinco interacciones. ¿Qué comportamiento conviene delegar al navegador y qué
+        responsabilidad sigue siendo de JavaScript?</p>
+      <div class="hero-pills"><span class="pill">HTML semántico</span><span class="pill">CSS moderno</span><span
+          class="pill">Vanilla JavaScript</span><span class="pill">Sin dependencias</span></div>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <div class="planet"></div>
+    </div>
+  </section>
+  <main class="wrap">
+    <div class="section-intro">
+      <div><span class="eyebrow">Live demo · 8 minutos</span>
+        <h2>Una pantalla. Cinco pruebas.</h2>
+      </div>
+      <p>Abre una interacción, prueba teclado y observa qué aporta la plataforma. Todas las interacciones funcionan sin
+        framework y sin conexión.</p>
+    </div>
+    <div class="lab-grid">
+      <section id="dialog-demo" class="card" aria-labelledby="dialog-heading">
+        <div class="card-head">
+          <div><span class="num">01 / ELEMENTO HTML</span>
+            <h3 id="dialog-heading">Modal nativo</h3>
+          </div><span class="stack">&lt;dialog&gt;</span>
+        </div>
+        <p>El navegador gestiona la capa superior, el contenido inerte y el cierre con Escape. JavaScript abre la
+          interacción.</p>
+        <div class="controls"><button class="btn" id="open-confirm" type="button">Abrir confirmación ↗</button></div>
+        <div class="micro">Prueba Tab y Escape. Observa que no puedes interactuar con la página de fondo.</div>
+        <details class="details">
+          <summary>Ver código usado</summary>
+          <pre><code><span class="code-key">const</span> dialog = document.<span class="code-fn">querySelector</span>(<span class="code-str">'#confirm'</span>);
+document.<span class="code-fn">querySelector</span>(<span class="code-str">'#open-confirm'</span>)
+  .<span class="code-fn">addEventListener</span>(<span class="code-str">'click'</span>, () => dialog.<span class="code-fn">showModal</span>());</code></pre>
+        </details>
+      </section>
+      <section id="popover-demo" class="card" aria-labelledby="popover-heading">
+        <div class="card-head">
+          <div><span class="num">02 / ATRIBUTO HTML</span>
+            <h3 id="popover-heading">Popover de acciones</h3>
+          </div><span class="stack">popover="auto"</span>
+        </div>
+        <p>Abrir, cerrar con Escape y hacer clic fuera no requieren un estado <code>isOpen</code> controlado desde
+          JavaScript.</p>
+        <div class="controls"><button class="btn pop-trigger" type="button" popovertarget="actions-panel">Acciones
+            ···</button></div>
+        <p class="status" id="action-status" aria-live="polite"></p>
+        <div id="actions-panel" popover="auto" class="menu-actions" aria-label="Acciones disponibles"><button
+            type="button" data-action="Duplicar">⧉ Duplicar</button><button type="button" data-action="Compartir">↗
+            Compartir</button><button type="button" data-action="Archivar">▣ Archivar</button></div>
+        <div class="micro">No es un menú ARIA completo: la navegación con flechas necesita implementación adicional si
+          se requiere.</div>
+        <details class="details">
+          <summary>Ver código usado</summary>
+          <pre><code><span class="code-tag">&lt;button</span> popovertarget=<span class="code-str">"actions-panel"</span><span class="code-tag">&gt;</span>Acciones<span class="code-tag">&lt;/button&gt;</span>
+<span class="code-tag">&lt;div</span> id=<span class="code-str">"actions-panel"</span> popover=<span class="code-str">"auto"</span><span class="code-tag">&gt;</span>…<span class="code-tag">&lt;/div&gt;</span></code></pre>
+        </details>
+      </section>
+      <section id="anchor-demo" class="card" aria-labelledby="anchor-heading">
+        <div class="card-head">
+          <div><span class="num">03 / CSS MODERNO</span>
+            <h3 id="anchor-heading">Anchor Positioning</h3>
+          </div><span class="stack">position-anchor</span>
+        </div>
+        <p>CSS relaciona un elemento flotante con su referencia sin medir coordenadas en cada scroll o resize.</p>
+        <div class="controls"><button type="button" class="btn btn-alt" id="shift-anchor">Mover referencia
+            →</button><span id="anchor-support" class="micro"></span></div>
+        <div class="anchor-playground" id="anchor-playground"><button type="button" class="btn anchor-button"
+            id="anchor-reference" aria-describedby="tip">Elemento ancla ⓘ</button><span class="tooltip" role="tooltip"
+            id="tip">Este tooltip sigue al ancla</span></div>
+        <details class="details">
+          <summary>Ver código usado</summary>
+          <pre><code>.anchor-button { anchor-name: --tooltip-anchor; }
+.tooltip {
+  position: fixed;
+  position-anchor: --tooltip-anchor;
+  position-area: top;
+  position-try-fallbacks: flip-block, flip-inline;
+}</code></pre>
+        </details>
+      </section>
+      <section id="has-demo" class="card" aria-labelledby="has-heading">
+        <div class="card-head">
+          <div><span class="num">04 / SELECTOR CSS</span>
+            <h3 id="has-heading">Estado con :has()</h3>
+          </div><span class="stack">:has(input:checked)</span>
+        </div>
+        <p>El padre responde al estado de su hijo mediante CSS. No es necesario escuchar el cambio para modificar una
+          clase.</p>
+        <div class="state-card"><label><input type="checkbox">Destacar tarjeta</label>
+          <p>El checkbox cambia el estilo del contenedor, sin JavaScript.</p>
+        </div>
+        <details class="details">
+          <summary>Ver código usado</summary>
+          <pre><code>.state-card:<span class="code-fn">has</span>(input:checked) {
+  background: #2a4050;
+  border-color: var(--cyan);
+}</code></pre>
+        </details>
+      </section>
+      <section id="transition-demo" class="card card-wide" aria-labelledby="transition-heading">
+        <div class="switch-demo">
+          <div>
+            <div class="card-head">
+              <div><span class="num">05 / WEB API + CSS</span>
+                <h3 id="transition-heading">View Transitions</h3>
+              </div><span class="stack">startViewTransition()</span>
+            </div>
+            <p>JavaScript modifica el DOM. El navegador se encarga de capturar los estados visuales y animar el cambio.
+            </p>
+            <div class="controls"><button class="btn" type="button" id="toggle-card">Cambiar vista ↗</button></div>
+            <div class="micro">Si el usuario solicita reducir movimiento, se cambia el contenido sin animación.</div>
+          </div>
+          <article class="view-card" id="view-card">
+            <h4 id="view-title">Vista compacta</h4>
+            <p id="view-copy">Este componente muestra información resumida.</p>
+          </article>
+        </div>
+        <details class="details">
+          <summary>Ver código usado</summary>
+          <pre><code><span class="code-key">const</span> update = () => card.classList.<span class="code-fn">toggle</span>(<span class="code-str">'expanded'</span>);
+<span class="code-key">if</span> (document.startViewTransition) {
+  document.<span class="code-fn">startViewTransition</span>(update);
+} <span class="code-key">else</span> {
+  <span class="code-fn">update</span>();
+}</code></pre>
+        </details>
+      </section>
+    </div>
+    <footer class="ending"><strong>No es sin JavaScript.<br>Es JavaScript donde aporte :)</strong>
+      <div>Shirley Ramos 🌸 · <a href="https://www.github.com/shinnmar" target="_blank"
+          rel="noopener noreferrer">shinnmar</a></div>
+    </footer>
+  </main>
+  <dialog id="confirm" aria-labelledby="confirm-title" aria-describedby="confirm-desc">
+    <h2 id="confirm-title">¿Confirmamos la acción?</h2>
+    <p id="confirm-desc">Un modal HTML nativo. El fondo queda inerte y Escape lo cierra.</p>
+    <form method="dialog"><button class="btn btn-alt" value="cancelar" autofocus>Cancelar</button><button class="btn"
+        value="confirmar">Confirmar</button></form>
+  </dialog>
+  <script src="script.js" defer></script>
+</body>
+
+</html>
