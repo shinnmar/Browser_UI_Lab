@@ -1,6 +1,6 @@
-# Browser UI Lab · CodeOn 2026
+# Browser UI Lab
 
-Demo de la charla **Your UI Doesn’t Need That JavaScript: Stop Rebuilding the Browser** de Shirley Ramos.
+Demo de la charla **Your UI Doesn’t Need That JavaScript: Stop Rebuilding the Browser** de Shirley Ramos :3
 
 Cinco interacciones con HTML, CSS moderno y JavaScript puro, sin dependencias:
 
@@ -10,7 +10,7 @@ Cinco interacciones con HTML, CSS moderno y JavaScript puro, sin dependencias:
 4. Selector CSS `:has()`
 5. View Transitions API y fallback para movimiento reducido
 
-## Probar localmente
+## 👩🏽‍💻 Probar localmente
 
 Abre `index.html` en Chrome actualizado. No requiere instalación ni servidor.
 
@@ -30,7 +30,7 @@ Abre `index.html` en Chrome actualizado. No requiere instalación ni servidor.
 
 ## 📚 Recursos y documentación
 
-Si quieres profundizar en las APIs y funcionalidades que exploramos durante la charla **Your UI Doesn't Need That JavaScript: Stop Rebuilding the Browser**, aquí tienes algunos recursos útiles.
+Si quieres profundizar en las APIs y funcionalidades que exploramos durante la charla **Your UI Doesn't Need That JavaScript: Stop Rebuilding the Browser**, aquí tienes algunos recursos útiles n.n
 
 ### 1. HTML Dialog
 
@@ -75,7 +75,7 @@ Si quieres profundizar en las APIs y funcionalidades que exploramos durante la c
 ---
 
 
-Shirley Ramos
+Shirley Ramos 👩🏽‍💻🌸🚀✨
 Frontend Developer · UI Engineering
 
 > No es sin JavaScript. Es JavaScript donde aporta :)
