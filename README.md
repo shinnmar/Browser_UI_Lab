@@ -71,7 +71,7 @@ Si quieres profundizar en las APIs y funcionalidades que exploramos durante la c
 - [Baseline](https://web.dev/baseline) — Disponibilidad de funcionalidades web.
 - [Web Platform Status](https://webstatus.dev/) — Estado de las funcionalidades de la plataforma.
 - [Chrome for Developers](https://developer.chrome.com/blog/) — Actualizaciones del navegador y nuevas APIs.
-
+- [Resumen de la charla](https://shinnmar.medium.com/your-ui-doesnt-need-that-javascript-stop-rebuilding-the-browser-5e6350be9ceb?sharedUserId=shinnmar) — Artículo en Medium.
 ---
 
 
