@@ -10,23 +10,20 @@ Cinco interacciones con HTML, CSS moderno y JavaScript puro, sin dependencias:
 4. Selector CSS `:has()`
 5. View Transitions API y fallback para movimiento reducido
 
-## 👩🏽‍💻 Probar localmente
-
-Abre `index.html` en Chrome actualizado. No requiere instalación ni servidor.
-
-## Publicar con GitHub Pages
-
-1. Crea un repositorio y sube **los cuatro archivos** (`index.html`, `styles.css`, `script.js`, `README.md`) a la raíz.
-2. En el repositorio entra en **Settings → Pages**.
-3. Selecciona **Deploy from a branch** → `main` → `/ (root)` y guarda.
-4. Cuando se complete la publicación, abre la URL indicada por GitHub Pages.
-
-## Aclaraciones para la demo
+## 👩🏽‍💻 Aclaraciones para la demo
 
 - Las acciones **Duplicar**, **Compartir** y **Archivar** son simuladas: JS muestra el nombre de la acción elegida, pero no modifica datos reales.
 - El popover ofrece apertura y cierre nativos; **no** implementa un menú ARIA con navegación por flechas.
 - Anchor Positioning resuelve la posición, no todos los eventos/semántica de un tooltip real.
 - La View Transitions API anima cambios del DOM gestionados por JS; si no existe la API o se prefiere reducir movimiento, la vista cambia sin animación.
+
+## 📖 Lee el artículo
+
+¿Y si el navegador ya puede hacer parte de lo que seguimos resolviendo con JavaScript?
+
+[![Artículo en Medium](./‎assets/Your UI Doesn’t Need That JavaScript.png)](https://shinnmar.medium.com/your-ui-doesnt-need-that-javascript-stop-rebuilding-the-browser-5e6350be9ceb)
+
+[**Leer artículo completo en Medium →**](https://shinnmar.medium.com/your-ui-doesnt-need-that-javascript-stop-rebuilding-the-browser-5e6350be9ceb)
 
 ## 📚 Recursos y documentación
 
@@ -71,11 +68,4 @@ Si quieres profundizar en las APIs y funcionalidades que exploramos durante la c
 - [Baseline](https://web.dev/baseline) — Disponibilidad de funcionalidades web.
 - [Web Platform Status](https://webstatus.dev/) — Estado de las funcionalidades de la plataforma.
 - [Chrome for Developers](https://developer.chrome.com/blog/) — Actualizaciones del navegador y nuevas APIs.
-- [Resumen de la charla](https://shinnmar.medium.com/your-ui-doesnt-need-that-javascript-stop-rebuilding-the-browser-5e6350be9ceb?sharedUserId=shinnmar) — Artículo en Medium.
 ---
-
-
-Shirley Ramos 👩🏽‍💻🌸🚀✨
-Frontend Developer · UI Engineering
-
-> No es sin JavaScript. Es JavaScript donde aporta :)
