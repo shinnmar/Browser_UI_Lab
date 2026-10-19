@@ -21,7 +21,7 @@ Cinco interacciones con HTML, CSS moderno y JavaScript puro, sin dependencias:
 
 ¿Y si el navegador ya puede hacer parte de lo que seguimos resolviendo con JavaScript?
 
-[![Artículo en Medium](./‎assets/Your UI Doesn’t Need That JavaScript.png)](https://shinnmar.medium.com/your-ui-doesnt-need-that-javascript-stop-rebuilding-the-browser-5e6350be9ceb)
+[![Artículo en Medium](./assets/medium-preview.png)](https://shinnmar.medium.com/your-ui-doesnt-need-that-javascript-stop-rebuilding-the-browser-5e6350be9ceb)
 
 [**Leer artículo completo en Medium →**](https://shinnmar.medium.com/your-ui-doesnt-need-that-javascript-stop-rebuilding-the-browser-5e6350be9ceb)
 
